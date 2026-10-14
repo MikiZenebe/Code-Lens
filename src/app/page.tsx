@@ -49,7 +49,20 @@ export default function HomePage() {
           <div className="py-6 sm:py-10">
             <h1 className="landing-reveal landing-reveal-delay-1 landing-title text-5xl text-(--landing-ink) sm:text-6xl lg:text-[4.75rem]">
               Code Lens
-              <span className="block"> AI Code Auditor</span>
+              <span className="relative block">
+                AI Code Auditor
+                <svg
+                  aria-hidden
+                  viewBox="0 0 260 12"
+                  className="absolute -bottom-2 left-0 h-3 w-44 text-(--landing-accent) sm:w-56"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                >
+                  <path d="M2 8 Q 40 2, 80 7 T 160 6 T 258 8" />
+                </svg>
+              </span>
             </h1>
             <p className="landing-reveal landing-reveal-delay-2 mt-6 text-2xl font-semibold tracking-tight text-(--landing-ink) sm:text-3xl">
               An AI senior developer for your repository.
@@ -74,7 +87,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:block -rotate-1">
             <CodePlane />
           </div>
         </div>
@@ -82,7 +95,7 @@ export default function HomePage() {
 
       <section
         id="why"
-        className="landing-band scroll-mt-28 px-6 py-24 sm:px-10"
+        className="landing-band scroll-mt-28 px-6 py-20 sm:px-10"
       >
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div>
@@ -99,7 +112,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="how" className="scroll-mt-28 px-6 py-24 sm:px-10">
+      <section id="how" className="scroll-mt-28 px-6 py-32 sm:px-10">
         <div className="mx-auto max-w-6xl">
           <h2 className="landing-title text-3xl sm:text-5xl">
             From repository to insight
@@ -199,6 +212,16 @@ export default function HomePage() {
                     Sources: src/lib/auth.ts · src/proxy.ts
                   </p>
                 </div>
+              </div>
+            </div>
+            <div className="mt-8 flex justify-end">
+              <div className="rotate-2 rounded-md bg-amber-100 px-4 py-3 text-sm text-amber-900 shadow-sm ring-1 ring-amber-200">
+                <p className="font-medium">
+                  Tip: start with the security findings.
+                </p>
+                <p className="mt-1 text-xs text-amber-800/80">
+                  — from a real review session
+                </p>
               </div>
             </div>
           </div>
